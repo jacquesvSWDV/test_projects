@@ -28,7 +28,7 @@ class TestGetUserData(unittest.TestCase):
         user_data = get_user_data(1)
 
         #verify requests.get has been called with the correct URL
-        mock.get.assert_called_with('https://api.example.com/users/1')
+        mock_get.assert_called_with('https://api.example.com/users/1')
 
         #assert that the returned user data is same real user data
         self.assertEqual(user_data, response_dict)
